@@ -31,5 +31,16 @@ public class Main {
         long myLongValue = 100L;
         long myLongMinValue = -9_223_372_036_854_775_808L;
         long myLongMaxValue = 9_223_372_036_854_775_807L;
+
+
+        byte byteValue = 10;
+        short shortValue = 20;
+        int intValue = 50;
+
+        long longTotal = 5000L + 10L * (byteValue + shortValue + intValue);
+        short shortTotal = (short) (1000 + 10 * (byteValue + shortValue + intValue));
+        System.out.println("longTotal = " + longTotal);
+        System.out.println("shortTotal = " + shortTotal);
+
     }
 }
