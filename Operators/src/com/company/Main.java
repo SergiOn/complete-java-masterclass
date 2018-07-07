@@ -72,5 +72,45 @@ public class Main {
         if (topScore > secondTopScore && topScore < 100) {
             System.out.println("Greater then top score and less then 100");
         }
+
+
+        topScore = 80;
+
+        if (topScore < 100) {
+            System.out.println("You got the high score!");
+        }
+
+        secondTopScore = 81;
+
+        if ((topScore > secondTopScore) && (topScore < 100)) {
+            System.out.println("Greater then top score and less then 100");
+        }
+
+        if ((topScore > 90) || (secondTopScore <= 90)) {
+            System.out.println("One of these tests is true");
+        }
+
+        int newValue = 50;
+
+//        if (newValue = 50) { // looking for boolean
+        if (newValue == 50) {
+//            System.out.println("This is an error");
+            System.out.println("This is true");
+        }
+
+        boolean isCar = false;
+
+        // if (isCar = true) { // doesn't have error because boolean
+        if (isCar == true) {
+            System.out.println("This is not supported to happen");
+        }
+
+        isCar = true;
+        boolean wasCar = isCar ? true : false;
+
+        if (wasCar) {
+            System.out.println("wasCar is true");
+        }
+
     }
 }
