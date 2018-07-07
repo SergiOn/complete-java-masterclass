@@ -112,5 +112,17 @@ public class Main {
             System.out.println("wasCar is true");
         }
 
+
+        double myFirstValue = 20d;
+        double mySecondValue = 80d;
+        double myTotal = (myFirstValue + mySecondValue) * 25;
+        System.out.println("myTotal = " + myTotal);
+        double theReminder = myTotal % 40;
+        System.out.println("theReminder is " + theReminder);
+
+        if (theReminder <= 20) {
+            System.out.println("Total was over the limit");
+        }
+
     }
 }
