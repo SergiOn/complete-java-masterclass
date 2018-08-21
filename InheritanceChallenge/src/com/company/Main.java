@@ -11,6 +11,11 @@ public class Main {
     // For you specific type of vehicle you will want to add something specific for that type of car.
 
     public static void main(String[] args) {
-	// write your code here
+
+        Outlander outlander = new Outlander(36);
+        outlander.steer(45);
+        outlander.accelerate(30);
+        outlander.accelerate(20);
+        outlander.accelerate(-45);
     }
 }
