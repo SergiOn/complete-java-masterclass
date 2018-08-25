@@ -25,22 +25,22 @@ public class Hamburger {
         this.breadRollType = breadRollType;
     }
 
-    public void addHamburgerAdditional1(String name, double price) {
+    public void addHamburgerAddition1(String name, double price) {
         this.additional1Name = name;
         this.additional1Price = price;
     }
 
-    public void addHamburgerAdditional2(String name, double price) {
+    public void addHamburgerAddition2(String name, double price) {
         this.additional2Name = name;
         this.additional2Price = price;
     }
 
-    public void addHamburgerAdditional3(String name, double price) {
+    public void addHamburgerAddition3(String name, double price) {
         this.additional3Name = name;
         this.additional3Price = price;
     }
 
-    public void addHamburgerAdditional4(String name, double price) {
+    public void addHamburgerAddition4(String name, double price) {
         this.additional4Name = name;
         this.additional4Price = price;
     }
