@@ -12,13 +12,11 @@ public class DeskPhone implements ITelephone {
     @Override
     public void powerOn() {
         System.out.println("No action taken, desk phone does not have a power button");
-
     }
 
     @Override
     public void dial(int phoneNumber) {
-        System.out.println("Now ringing " + phoneNumber + " on deskphone");
-
+        System.out.println("Now ringing " + phoneNumber + " on desk phone");
     }
 
     @Override
@@ -27,7 +25,6 @@ public class DeskPhone implements ITelephone {
             System.out.println("Answering the desk phone");
             isRinging = false;
         }
-
     }
 
     @Override
