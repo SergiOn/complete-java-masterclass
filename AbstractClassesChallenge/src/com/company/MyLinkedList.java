@@ -83,13 +83,13 @@ public class MyLinkedList implements NodeList {
     }
 
     @Override
-    public void traverse(ListItem theRoot) {
-        if (theRoot == null) {
+    public void traverse(ListItem root) {
+        if (root == null) {
             System.out.println("The list is empty");
         } else {
-            while (theRoot != null) {
-                System.out.println(theRoot.getValue());
-                theRoot = theRoot.next();
+            while (root != null) {
+                System.out.println(root.getValue());
+                root = root.next();
             }
         }
     }
