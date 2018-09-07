@@ -13,7 +13,7 @@ public class Theatre {
 //    private Collection<Seat> seats = new TreeSet<>(); // error
 //    private Collection<Seat> seats = new LinkedHashSet<>();
 //    private Collection<Seat> seats = new ArrayList<>();
-    private List<Seat> seats = new ArrayList<>();
+    public List<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -84,7 +84,7 @@ public class Theatre {
         }
     }
 
-    private class Seat implements Comparable<Seat> {
+    public class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
 
