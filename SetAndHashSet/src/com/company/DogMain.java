@@ -1,8 +1,5 @@
 package com.company;
 
-/**
- * Created by dev on 17/01/2016.
- */
 public class DogMain {
     public static void main(String[] args) {
         Labrador rover = new Labrador("Rover");
