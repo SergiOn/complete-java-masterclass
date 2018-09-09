@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+//        Countdown countdown1 = new Countdown();
+//        Countdown countdown2 = new Countdown();
         Countdown countdown = new Countdown();
 
         CountdownThread t1 = new CountdownThread(countdown);
@@ -22,6 +24,8 @@ class Countdown {
 
     private int i;
 
+//    public void doCountdown() {
+//    public synchronized void doCountdown() {
     public void doCountdown() {
         String color;
 
@@ -39,9 +43,16 @@ class Countdown {
                 color = ThreadColor.ANSI_GREEN;
         }
 
-        for (i = 10; i > 0; i--) {
-            System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
-        }
+//        synchronized (color) {
+        synchronized (this) {
+            for (i = 10; i > 0; i--) {
+                System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+            }
+        };
+
+//        for (i = 10; i > 0; i--) {
+//            System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+//        }
     }
 }
 
