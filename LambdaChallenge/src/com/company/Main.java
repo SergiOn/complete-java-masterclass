@@ -24,10 +24,12 @@ public class Main {
         Runnable runnable1 = () -> {
             String myString = "Let's split this up into an array";
             String[] parts = myString.split(" ");
-            for (String part: parts) {
-                System.out.println(part);
-            }
+            Arrays.stream(parts).forEach(System.out::println);
+//            for (String part: parts) {
+//                System.out.println(part);
+//            }
         };
+        runnable1.run();
 
         Function<String, String> lambdaFunction =  s -> {
             StringBuilder returnVal = new StringBuilder();
