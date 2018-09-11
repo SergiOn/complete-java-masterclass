@@ -79,6 +79,12 @@ public class Main {
         String s = anotherClass.doSomething();
         System.out.println(s);
 
+        employees.forEach(employee -> {
+            System.out.println(employee.getName());
+//            System.out.println(employee.getAge());
+            new Thread(() -> System.out.println(employee.getAge())).start();
+        });
+
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2) {
@@ -145,5 +151,21 @@ class AnotherClass {
 
         System.out.println("The AnotherClass class's name is " + getClass().getSimpleName());
         return Main.doStringStuff(uc,"String1","String2");
+    }
+
+    public void printValue() {
+
+        int number = 25;
+
+        Runnable r = () -> {
+            try {
+                Thread.sleep(5000);
+            } catch(InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("The value is " + number);
+        };
+
+        new Thread(r).start();
     }
 }
