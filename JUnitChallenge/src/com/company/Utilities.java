@@ -1,8 +1,5 @@
 package com.company;
 
-/**
- * Created by timbuchalka on 28/11/16.
- */
 public class Utilities {
 
     // Returns a char array containing every nth char. When
@@ -25,14 +22,14 @@ public class Utilities {
     }
 
     // Removes pairs of the same character that are next
-    // to each other, by removing on e occurrencd of the character.
+    // to each other, by removing one occurrence of the character.
     // "ABBCDEEF" -> "ABCDEF"
     // "ABCBDEEF" -> "ABCBDEF" (the two B's aren't next to each other, so they
     // aren't removed.
     public String removePairs(String source) {
 
         // If length is less than  2, there won't be any pairs
-        if (source.length() < 2) {
+        if (source == null || source.length() < 2) {
             return source;
         }
 
