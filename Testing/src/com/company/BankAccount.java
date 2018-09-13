@@ -11,12 +11,11 @@ public class BankAccount {
 
     private int accountType;
 
-//    public BankAccount(String firstName, String lastName, double balance, int typeOfAccount) {
-    public BankAccount(String firstName, String lastName, double balance) {
+    public BankAccount(String firstName, String lastName, double balance, int typeOfAccount) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.balance = balance;
-//        this.accountType = typeOfAccount;
+        this.accountType = typeOfAccount;
     }
 
     // The branch argument is true if the customer is performing the transaction
