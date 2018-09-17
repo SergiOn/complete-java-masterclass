@@ -387,7 +387,7 @@ public class Datasource {
         }
     }
 
-    private void insertSong(String title, String artist, String album, int track) {
+    public void insertSong(String title, String artist, String album, int track) {
 
         try {
             conn.setAutoCommit(false);
@@ -404,7 +404,7 @@ public class Datasource {
                 throw new SQLException("The song insert failed");
             }
 
-        } catch(SQLException e) {
+        } catch(Exception e) {
             System.out.println("Insert song exception: " + e.getMessage());
             try {
                 System.out.println("Performing rollback");
