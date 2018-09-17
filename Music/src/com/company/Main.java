@@ -5,6 +5,7 @@ import com.company.model.Datasource;
 import com.company.model.SongArtist;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -51,7 +52,11 @@ public class Main {
 
         datasource.createViewForSongArtists();
 
-        songArtists = datasource.querySongInfoView("She's On Fire");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a song title: ");
+        String title = scanner.nextLine();
+
+        songArtists = datasource.querySongInfoView(title);
         if(songArtists.isEmpty()) {
             System.out.println("Couldn't find the artist for the song");
             return;
@@ -64,6 +69,10 @@ public class Main {
         }
 
         datasource.close();
+
+        // SELECT name, album, track FROM artist_list WHERE title = "Go Your Own Way" or 1=1 or ""
+
+        // SELECT name, album, track FROM artist_list WHERE title = "Go Your Own Way or 1=1 or ""
 
     }
 }
